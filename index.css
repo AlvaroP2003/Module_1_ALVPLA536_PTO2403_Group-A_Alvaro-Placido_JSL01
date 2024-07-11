@@ -1,14 +1,26 @@
+:root {
+    --main_back: #fbf2c0;
+    --font_head: #F96F5D;
+    --font_second: #c06e52;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     margin-top: 50px;
-    background-color: #f0f8ff;
-    color: #333;
+    background-color: var(--main_back);
+    color: #48392A;
+    padding: 10px;
 }
 
-h2 {
-    font-size: 2em;
-    color: #6a5acd;
+img {
+    height: 150px;
+}
+
+h1 {
+    margin-top: 0px;
+    font-size: 2.5em;
+    color: var(--font_head)
 }
 
 input, button {
@@ -21,19 +33,27 @@ input, button {
 }
 
 button {
-    background-color: #32cd32;
+    background-color: var(--font_head);
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #228b22;
+    background-color: var(--font_second);
 }
 
 #result {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-top: 20px;
+}
+
+#result .c-green {
+    color: #008000;
+}
+
+#result .c-red {
+    color: #ff4500;
 }
 
 .valid {
