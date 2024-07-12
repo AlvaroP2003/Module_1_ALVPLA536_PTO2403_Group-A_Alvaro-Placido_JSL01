@@ -24,13 +24,27 @@ function validateSyntax() {
 
 
     // Check if name follows after number
+    let nameEl = Array.from(input.substr(8))
+    let letterArray = [] 
+    let aplhabeticalValue = /^[a-zA-Z]+$/
+
+
+    nameEl.forEach(e => {
+        letterArray.push(aplhabeticalValue.test(e))
+    });
+
+    let checkIfLetter = letterArray.includes(false)
+
+
     let includesName = input.length > 8
+    
+
 
 
 
     // Wll check if all criteria is matched
     function checkAll() {
-        if(containsPets === true && checkIfNum === false && includesName === true) {
+        if(containsPets === true && checkIfNum === false && checkIfLetter === false && includesName === true ) {
             result = '<i class="fa-solid fa-circle c-green"></i> Valid Syntax'
         } else {
             result = '<i class="fa-solid fa-circle c-red"></i> Invalid Syntax'
